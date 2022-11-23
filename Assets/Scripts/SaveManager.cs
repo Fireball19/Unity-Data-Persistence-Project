@@ -20,7 +20,7 @@ public class SaveManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        LoadName();
+        LoadBestScore();
     }
 
     [System.Serializable]
@@ -30,7 +30,7 @@ public class SaveManager : MonoBehaviour
         public int bestScore;
     }
 
-    public void SaveName()
+    public void SaveBestScore()
     {
         SaveData data = new SaveData();
         data.playerName = playerName;
@@ -41,7 +41,7 @@ public class SaveManager : MonoBehaviour
         File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
     }
 
-    public void LoadName()
+    public void LoadBestScore()
     {
         string path = Application.persistentDataPath + "/savefile.json";
         if (File.Exists(path))
