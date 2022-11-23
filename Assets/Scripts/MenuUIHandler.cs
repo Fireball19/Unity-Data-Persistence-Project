@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class MenuUIHandler : MonoBehaviour
 {
     public void ChangePlayerName(string name) {
-        SaveManager.Instance.playerName = name;
+        SaveManager.Instance.newPlayerName = name;
     }
 
     public void StartNew() {

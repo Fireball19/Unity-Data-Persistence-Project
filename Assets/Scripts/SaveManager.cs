@@ -6,6 +6,7 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
+    public string newPlayerName;
     public string playerName;
     public int bestScore;
 
@@ -33,7 +34,7 @@ public class SaveManager : MonoBehaviour
     public void SaveBestScore()
     {
         SaveData data = new SaveData();
-        data.playerName = playerName;
+        data.playerName = newPlayerName;
         data.bestScore = bestScore;
 
         string json = JsonUtility.ToJson(data);
