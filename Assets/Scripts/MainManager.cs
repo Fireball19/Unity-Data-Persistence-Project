@@ -66,6 +66,11 @@ public class MainManager : MonoBehaviour
     {
         m_Points += point;
         ScoreText.text = $"Score : {m_Points}";
+
+        if (m_Points > SaveManager.Instance.bestScore) {
+            SaveManager.Instance.bestScore = m_Points;
+            SaveManager.Instance.SaveBestScore();
+        }
     }
 
     public void GameOver()
