@@ -11,7 +11,7 @@ public class UIBestScore : MonoBehaviour
     void Start()
     {
         if (SaveManager.Instance != null) {
-            bestScoreText.text = "Best Score : " + SaveManager.Instance.bestScore + " Name : " + SaveManager.Instance.name;
+            bestScoreText.text = "Best Score : " + SaveManager.Instance.bestScore + " Name : " + SaveManager.Instance.playerName;
         }
     }
 }
